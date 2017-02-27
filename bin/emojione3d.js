@@ -6,7 +6,7 @@ var THREE = require('three');
 var ThreeContext = require('../lib/three-context');
 var async = require('async');
 
-var input = __dirname + '/../assets/test/';
+var input = __dirname + '/../assets/svg/';
 var output = __dirname + '/../assets/json/';
 
 var stats = {
@@ -33,8 +33,6 @@ fs.readdir( input, function( err, files ) {
                     }
 
                     canvgc(data, 1000, function (err, jsData) {
-                        console.log(jsData);
-
                         if (err) {
                             console.error(toPath);
                             console.error(err);
@@ -74,9 +72,3 @@ fs.readdir( input, function( err, files ) {
             }
         );
 });
-
-
-/*
-
-
-*/
